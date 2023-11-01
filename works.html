@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>포트폴리오</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/action.js"></script>
+	<script src="js/fullpage.js"></script>
+	<script src="js/nodes.js"></script>
+</head>
+<body>
+	<div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;">
+		<canvas id="nodes"></canvas>
+	</div>
+	<header>
+		<div id="menu">
+			<div class="menuline"></div>
+			<div class="menu_button">
+				<ul>
+					<li></li>
+					<li></li>
+					<li>Menu</li>
+					<li class="noma_bottom"></li>
+				</ul>
+			</div>
+		</div>
+		<div id="menuclick">
+			<div id="menu_black">
+				<div class="menuline"></div>
+				<div class="menu_button">
+					<ul>
+						<li></li>
+						<li>close</li>
+						<li class="noma_bottom"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu_list">
+				<ul>
+					<li><a href="main.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="works.html">Works</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="word_wrap">
+				<div class="wordN"><img src="images/wordN_color.png"></div>
+				<div class="wordR"><img src="images/wordR_color.png"></div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<h1>
+			<a href="main.html">
+				<img src="images/logo_color.jpg" alt="로고" class="logo">
+				<img src="images/home_color.jpg" alt="home" class="home">
+			</a>
+		</h1>
+		<div id="fullpage">
+			<div class="con01 section" data-menuanchor="1Page" style="background: none">
+				<h2>Works</h2>
+				<div class="main_text">
+					<p>Create My Inspiration</p>
+					<p><span>&#91; &#58;</span> 영감을 창조하다 <span>&#93;</span></p>
+				</div>
+				<div class="scroll_icon">
+					<img src="images/scroll_white.png">
+				</div>
+			</div>
+			<div class="con02 section" data-menuanchor="2Page">
+				<h2><span></span>Works</h2>
+				<ul class="works_list">
+					<li class="work01">
+						<div class="move_num">01</div>
+						<span class="move_line"></span>
+						<ul>
+							<li class="title_txt">Web Design</li>
+							<li class="sub_txt">Only Design&#40;photoshop&#38;illustration&#41;</li>
+							<li class="button_back">
+								<div class="button_circle" data-link='works_sub01.html'></div>
+								<div class="arrow"></div>
+							</li>
+						</ul>
+					</li>
+					<li class="work02">
+						<div class="move_num">02</div>
+						<span class="move_line"></span>
+						<ul>
+							<li class="title_txt">Web Publishing</li>
+							<li class="sub_txt">Design &#43; Publishing&#40;html&#38;css&#38;js&#41;</li>
+							<li class="button_back">
+								<div class="button_circle" data-link='works_sub02.html'></div>
+								<div class="arrow"></div>
+							</li>
+						</ul>
+					</li>
+					<li class="work03 noma_right">
+						<div class="move_num">03</div>
+						<span class="move_line"></span>
+						<ul>
+							<li class="title_txt">Other Design</li>
+							<li class="sub_txt">Web Design&#38;Graphic Design</li>
+							<li class="button_back">
+								<div class="button_circle" data-link='works_sub03.html'></div>
+								<div class="arrow"></div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>	
+	</section>
+	<script>
+		var myFullpage = new fullpage('#fullpage', {
+			anchors: ['1Page', '2Page']
+		});
+
+		
+		var nodesjs = new NodesJs({
+			id: 'nodes',
+			width: window.innerWidth,
+			height: window.innerHeight,
+			backgroundFrom: [133, 237, 203],
+			backgroundTo: [120, 193, 233],
+			backgroundDuration: 10000,
+			number: window.hasOwnProperty('orientation') ? 30: 100,
+			speed: 20
+		});
+		
+	</script>
+
+
+</body>
+</html>

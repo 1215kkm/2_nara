@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>포트폴리오</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/gradientify.css">
+	
+	<script src="js/jquery-3.3.1.js"></script>
+	<script src="js/action.js"></script>
+	<script src="js/fullpage.js"></script>
+	<script src="js/gradientify.js"></script>
+</head>
+<body>
+	<header>
+		<div id="menu">
+			<div class="menuline"></div>
+			<div class="menu_button">
+				<ul>
+					<li></li>
+					<li></li>
+					<li>Menu</li>
+					<li class="noma_bottom"></li>
+				</ul>
+			</div>
+		</div>
+		<div id="menuclick">
+			<div id="menu_black">
+				<div class="menuline"></div>
+				<div class="menu_button">
+					<ul>
+						<li></li>
+						<li>close</li>
+						<li class="noma_bottom"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="menu_list">
+				<ul>
+					<li><a href="main.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="works.html">Works</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="word_wrap">
+				<div class="wordN"><img src="images/wordN_color.png"></div>
+				<div class="wordR"><img src="images/wordR_color.png"></div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<h1>
+			<a href="main.html">
+				<img src="images/logo_color.jpg" alt="로고" class="logo">
+				<img src="images/home_color.jpg" alt="home" class="home">
+			</a>
+		</h1>
+		<div id="fullpage">
+			<div class="gradientify-gradient"></div>
+			<div class="con01 section con_sec" data-menuanchor="1Page">
+				<h2>Contact</h2>
+				<div class="main_text">
+					<p>I am always OPEN !!</p>
+				</div>
+				<ul class="icon_box">
+					<li class="arrow_txt">
+						<p>pick a way</p>
+						<span></span>
+					</li>
+					<li class="icon_phone">
+						<div class="defalt_box">
+							<img src="images/icon_phone.png">
+						</div>
+						<div class="hover_box">
+							<div class="hover_circle">
+								<img src="images/icon_phone_small.png" alt="">
+							</div>
+							<span class="hover_txt">010<br>4626<br>9029</span>
+						</div>
+					</li>
+					<li class="icon_email">
+						<div class="defalt_box">
+							<img src="images/icon_mail.png">
+						</div>
+						<div class="hover_box">
+							<div class="hover_circle">
+								<img src="images/icon_email_small.png" alt="">
+							</div>
+							<span class="hover_txt">vlffkqhtm96<p>@gmail.com</p></span>
+						</div>
+					</li>
+					<li class="icon_talk noma_right">
+						<div class="defalt_box">
+							<img src="images/icon_talk.png">
+						</div>
+						<div class="hover_box">
+							<div class="hover_circle">
+								<img src="images/icon_talk_small.png" alt="">
+							</div>
+							<span class="hover_txt"><p>kakaoTalk ID :</p>ccki22<p>&#40;이나라&#41;</p></span>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<script>
+		var myFullpage = new fullpage('#fullpage', {
+			anchors: ['1Page', '2Page']
+		});
+
+		new Gradientify({
+			element: document.body,
+			gradients: [
+			`linear-gradient(60deg, rgb(255, 0, 0), rgb(0, 0, 255))`,
+			`linear-gradient(10deg, rgb(25, 123, 23), #ff22af)`,
+			`radial-gradient(rgb(25, 123, 223), red)` // All valid CSS gradients are supported
+			],
+			fixed: false,
+			delay: 0,
+			interval: 5000
+
+		})
+
+	</script>
+</body>
+</html>
